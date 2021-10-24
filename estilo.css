@@ -22,12 +22,14 @@ body {
     display: block;
     margin-bottom: 20px; 
     min-width: 270px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 #coluna2 {
     max-width: 100%;
     display: flex;
-    justify-content:space-around;
+    justify-content:center;
     align-items: center;
     flex-wrap: wrap;
 }
