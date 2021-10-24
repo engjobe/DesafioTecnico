@@ -2,42 +2,32 @@ body {
     background-image: url("fundo.jpg");
     background-position: center;
     background-size: cover;
-    margin:1%;
 }
 
 #cabecalho {
     color:whitesmoke;
-    border: black 1px solid;
-    border-radius: 10px;
     margin-bottom: 20px;
-    box-shadow: black 2px 2px 5px;
     text-align: center;
-    background-color: rgba(0,0,0,0.4);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 22px;
+    text-shadow: black 2px 2px 2px;
 }
 
-#conteudo {
-    width: 70%;
-    margin:auto;   
-}
+   
 
 #coluna1 {
     color:whitesmoke;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 13px;
     display: block;
-    border: black 1px solid;
-    border-radius: 10px;
-    background-color: rgba(0,0,0,0.4);
-    box-shadow: black 2px 2px 5px;
-    padding: 2%;
-    margin-bottom: 20px;    
+    margin-bottom: 20px; 
 }
 
 #coluna2 {
+    width: 100%;
     display: flex;
-    justify-content:space-between;
-    align-items: baseline;
+    justify-content:space-around;
+    align-items: center;
     flex-wrap: wrap;
 }
 
@@ -94,5 +84,15 @@ input[type=text] {
   justify-content: center;
 }
 
+#borda {
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.4);
+    box-shadow: black 2px 2px 5px;
+    border-color: rgba(0, 0, 0, 0);
+}
+
+#legenda {
+    font-weight: bold;
+}
   
   

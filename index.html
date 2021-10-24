@@ -14,8 +14,10 @@
           </div>
           
           <div id="coluna2">
-
+            
             <div id="coluna1">
+              <fieldset id="borda">
+                <legend id="legenda">Dados Pessoais</legend>
               <label for="nome">Nome</label><br>
               <input type="text" id="nome" name="nome" placeholder="O seu nome" size="30"><br><br>
               <label for="sobrenome">Sobrenome</label><br>
@@ -30,9 +32,12 @@
                 <option value="feminino">Feminino</option>
                 <option value="masculino">Masculino</option>
               </select>
+              </fieldset>
             </div>
 
             <div id="coluna1">
+              <fieldset id="borda">
+                <legend id="legenda">Dados Residenciais</legend>
               <label for="endereco">Endereco</label><br>
               <input type="text" id="endereco" name="endereco" placeholder="O seu endereço" size="30"><br><br>
               <label for="numero">Numero</label><br>
@@ -76,15 +81,19 @@
               </select><br><br>
               <label for="cep">CEP</label><br>
               <input type="text" id="cep" name="cep" value="" maxlength="9" onkeyup="mascara_cep()" onkeypress='return onlynumber();'/>
+              </fieldset>
             </div>
 
             <div id="coluna1">
+              <fieldset id="borda">
+                <legend id="legenda">Contato</legend>
               <label for="telefone">Telefone Fixo</label><br>
               <input type="text" id="telefone" name="telefone" value="" size="30" maxlength="15" onkeypress='return onlynumber();'><br><br>
               <label for="celular">Telefone Celular</label><br>
               <input type="text" id="celular" name="celular" placeholder="DDD + celular" size="30" maxlength="15" onkeypress='return onlynumber();'>
+              </fieldset>
             </div>
-
+          
           </div>
 
           <div id="button">
