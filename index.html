@@ -12,7 +12,7 @@
           <div id="cabecalho">
             <h1>Cadastro Pessoal</h1>
           </div>
-      
+          
           <div id="coluna2">
 
             <div id="coluna1">
@@ -34,7 +34,7 @@
 
             <div id="coluna1">
               <label for="endereco">Endereco</label><br>
-              <input type="text" id="endereco" name="endereco" placeholder="O seu endereço" size="40"><br><br>
+              <input type="text" id="endereco" name="endereco" placeholder="O seu endereço" size="30"><br><br>
               <label for="numero">Numero</label><br>
               <input type="text" id="numero" name="numero" placeholder="Nº da residência" size="11" maxlength="10" onkeypress='return onlynumber();'><br><br>
               <label for="complemento">Complemento</label><br>
@@ -80,14 +80,16 @@
 
             <div id="coluna1">
               <label for="telefone">Telefone Fixo</label><br>
-              <input type="text" id="telefone" name="telefone" value="" maxlength="15" onkeypress='return onlynumber();'><br><br>
+              <input type="text" id="telefone" name="telefone" value="" size="30" maxlength="15" onkeypress='return onlynumber();'><br><br>
               <label for="celular">Telefone Celular</label><br>
-              <input type="text" id="celular" name="celular" placeholder="DDD + celular" maxlength="15" onkeypress='return onlynumber();'>
+              <input type="text" id="celular" name="celular" placeholder="DDD + celular" size="30" maxlength="15" onkeypress='return onlynumber();'>
             </div>
 
           </div>
 
+          <div id="button">
           <input type="submit" onclick="show_alert()" value="Enviar"/>
+          </div>
 
         <script> // início de javascript
 

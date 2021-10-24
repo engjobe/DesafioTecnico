@@ -2,14 +2,14 @@ body {
     background-image: url("fundo.jpg");
     background-position: center;
     background-size: cover;
-    margin:1.5%;
+    margin:1%;
 }
 
 #cabecalho {
     color:whitesmoke;
     border: black 1px solid;
     border-radius: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     box-shadow: black 2px 2px 5px;
     text-align: center;
     background-color: rgba(0,0,0,0.4);
@@ -17,7 +17,7 @@ body {
 }
 
 #conteudo {
-    width: 60%;
+    width: 70%;
     margin:auto;   
 }
 
@@ -30,7 +30,8 @@ body {
     border-radius: 10px;
     background-color: rgba(0,0,0,0.4);
     box-shadow: black 2px 2px 5px;
-    padding: 2%;    
+    padding: 2%;
+    margin-bottom: 20px;    
 }
 
 #coluna2 {
@@ -41,14 +42,9 @@ body {
 }
 
 input[type=submit] {
-    width: 70px;
-    height: 40px;
-    font-size: 20px;
-    position:relative;
-    left:825px;
-    bottom: 260px;
     box-shadow:black 2px 2px 5px;
     border-radius: 5px;
+    text-align: center;
 }
 
 input[type=text] {
@@ -92,6 +88,11 @@ input[type=text] {
     list-style-type: none;
 }
 
+#button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
   
   
