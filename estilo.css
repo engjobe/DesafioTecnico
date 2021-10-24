@@ -1,0 +1,96 @@
+body {
+    background-image: url("fundo.jpg");
+    background-position: center;
+    background-size: cover;
+    margin:1.5%;
+}
+
+#cabecalho {
+    color:whitesmoke;
+    border: black 1px solid;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: black 2px 2px 5px;
+    text-align: center;
+    background-color: rgba(0,0,0,0.4);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+#conteudo {
+    width: 60%;
+    margin:auto;   
+}
+
+#coluna1 {
+    color:whitesmoke;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 13px;
+    display: block;
+    border: black 1px solid;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.4);
+    box-shadow: black 2px 2px 5px;
+    padding: 2%;    
+}
+
+#coluna2 {
+    display: flex;
+    justify-content:space-between;
+    align-items: baseline;
+}
+
+input[type=submit] {
+    width: 70px;
+    height: 40px;
+    font-size: 20px;
+    position:relative;
+    left:825px;
+    bottom: 260px;
+    box-shadow:black 2px 2px 5px;
+    border-radius: 5px;
+}
+
+input[type=text] {
+    border-radius: 5px;
+    padding-left: 5px;  
+}
+
+#rodape {
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#rodape ul li img {
+    width: 40px;
+    height: 40px;
+}
+  
+#rodape ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#rodape ul li {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#efeito-img {
+    position:relative;top:0;
+    transition: all .2s ease-in-out
+}
+
+#efeito-img:hover {
+    top:-4px;
+    box-shadow:0 4px 3px rgb(43, 42, 42)
+}
+
+#lista {
+    list-style-type: none;
+}
+
+
+  
+  

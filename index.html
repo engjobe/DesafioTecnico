@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>.: Cadastro Pessoal - Atração :.</title>
+      <link rel="stylesheet" href="estilo.css"/>
+    </head>
+    <body>
+      <div id="conteudo">
+          <div id="cabecalho">
+            <h1>Cadastro Pessoal</h1>
+          </div>
+      
+          <div id="coluna2">
+
+            <div id="coluna1">
+              <label for="nome">Nome</label><br>
+              <input type="text" id="nome" name="nome" placeholder="O seu nome" size="30"><br><br>
+              <label for="sobrenome">Sobrenome</label><br>
+              <input type="text" id="sobrenome" name="sobrenome" placeholder="O seu sobrenome" size="30"><br><br>
+              <label for="cpf">CPF</label><br>
+              <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" size="15" autocomplete="off" maxlength="14" onkeyup="mascara_cpf()" onkeypress='return onlynumber();'><br><br>
+              <label for="rg">RG</label><br>
+              <input type="text" id="rg" name="rg" value="" size="15" maxlength="10" onkeypress='return onlynumber();'><br><br>
+              <label for="sexo">Sexo</label><br>
+              <select id="sexo" name="sexo">
+                <option value="selecione o sexo">Selecione</option>
+                <option value="feminino">Feminino</option>
+                <option value="masculino">Masculino</option>
+              </select>
+            </div>
+
+            <div id="coluna1">
+              <label for="endereco">Endereco</label><br>
+              <input type="text" id="endereco" name="endereco" placeholder="O seu endereço" size="40"><br><br>
+              <label for="numero">Numero</label><br>
+              <input type="text" id="numero" name="numero" placeholder="Nº da residência" size="11" maxlength="10" onkeypress='return onlynumber();'><br><br>
+              <label for="complemento">Complemento</label><br>
+              <input type="text" id="complemento" name="complemento" value="" size="11"><br><br>
+              <label for="bairro">Bairro</label><br>
+              <input type="text" id="bairro" name="bairro" value=""><br><br>
+              <label for="cidade">Cidade</label><br>
+              <input type="text" id="cidade" name="cidade" value=""><br><br>
+              <label for="uf">Estado</label><br>
+              <select id="estado"><br><br>
+                <option value="estado">Selecione</option>
+                <option value="estado">Acre</option>
+                <option value="estado">Alagoas</option>
+                <option value="estado">Amapá</option>
+                <option value="estado">Amazonas</option>
+                <option value="estado">Bahia</option>
+                <option value="estado">Ceará</option>
+                <option value="estado">Distrito Federal</option>
+                <option value="estado">Espírito Santo</option>
+                <option value="estado">Goiás</option>
+                <option value="estado">Maranhão</option>
+                <option value="estado">Mato Grosso</option>
+                <option value="estado">Mato Grosso do Sul</option>
+                <option value="estado">Minas Gerais</option>
+                <option value="estado">Pará</option>
+                <option value="estaod">Paraíba</option>
+                <option value="estaod">Paraná</option>
+                <option value="estado">Pernambuco</option>
+                <option value="estado">Piauí</option>
+                <option value="estado">Rio de Janeiro</option>
+                <option value="estado">Rio Grande do Norte</option>
+                <option value="estado">Rio Grande do Sul</option>
+                <option value="estado">Rondônia</option>
+                <option value="estado">Roraima</option>
+                <option value="estado">Santa Catarina</option>
+                <option value="estado">São Paulo</option>
+                <option value="estado">Sergipe</option>
+                <option value="estado">Tocantins</option>
+              </select><br><br>
+              <label for="cep">CEP</label><br>
+              <input type="text" id="cep" name="cep" value="" maxlength="9" onkeyup="mascara_cep()" onkeypress='return onlynumber();'/>
+            </div>
+
+            <div id="coluna1">
+              <label for="telefone">Telefone Fixo</label><br>
+              <input type="text" id="telefone" name="telefone" value="" maxlength="15" onkeypress='return onlynumber();'><br><br>
+              <label for="celular">Telefone Celular</label><br>
+              <input type="text" id="celular" name="celular" placeholder="DDD + celular" maxlength="15" onkeypress='return onlynumber();'>
+            </div>
+
+          </div>
+
+          <input type="submit" onclick="show_alert()" value="Enviar"/>
+
+        <script> // início de javascript
+
+          // Máscara CPF
+          function mascara_cpf() {
+            var cpf = document.getElementById('cpf')
+            if(cpf.value.length == 3 || cpf.value.length == 7) {
+              cpf.value += "."
+            } else if(cpf.value.length == 11) {
+              cpf.value += "-"
+            }
+          }
+
+          // Máscara CEP
+          function mascara_cep() {
+            var cep = document.getElementById('cep')
+            if(cep.value.length == 5) {
+              cep.value += "-"
+            }
+          }
+
+          // Máscara ER
+          function mascara(o,f){
+            v_obj=o
+            v_fun=f
+            setTimeout("execmascara()",1)
+          }
+          function execmascara(){
+            v_obj.value=v_fun(v_obj.value)
+          }
+          function mtel(v){
+            v=v.replace(/\D/g,""); //Remove tudo o que não é dígito
+            v=v.replace(/^(\d{2})(\d)/g,"($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
+            v=v.replace(/(\d)(\d{4})$/,"$1-$2"); //Coloca hífen entre o quarto e o quinto dígitos
+            return v;
+          }
+          function id( el ){
+	          return document.getElementById( el );
+          }
+          window.onload = function(){
+	          id('celular').onkeyup = function(){
+		          mascara( this, mtel );
+	          }
+          }
+
+          // Mensagens de alerta
+          function show_alert(){
+            var nome = document.getElementById("nome");
+            var sobrenome = document.getElementById("sobrenome");
+            var cpf = document.getElementById("cpf");
+            var endereco = document.getElementById("endereco");
+            var numero = document.getElementById("numero");
+            var celular = document.getElementById("celular");  
+
+            if (nome.value == "") {
+              alert("\nObrigatório preencher o campo Nome!");
+              nome.focus();
+              return;
+            }
+            if (sobrenome.value == "") {
+              alert("\nObrigatório preencher o campo Sobrenome!");
+              sobrenome.focus();
+              return;
+            }
+            if (cpf.value == "") {
+              alert("\nObrigatório preencher o campo CPF!");
+              cpf.focus();
+              return;
+            }
+            if (endereco.value == "") {
+              alert("\nObrigatório preencher o campo Endereço!");
+              endereco.focus();
+              return;
+            }
+            if (numero.value == "") {
+              alert("\nObrigatório preencher o campo Número!");
+              numero.focus();
+              return;
+            }
+            if (celular.value == "") {
+              alert("\nObrigatório preencher o campo Celular!");
+              celular.focus();
+              return;
+            }    
+            alert("\nCadastro enviado com sucesso!");
+          }
+
+        // Somente dígitos
+        function onlynumber(evt) {
+        var theEvent = evt || window.event;
+        var key = theEvent.keyCode || theEvent.which;
+        key = String.fromCharCode( key );
+        var regex = /^[0-9.]+$/;
+          if( !regex.test(key) ) {
+          theEvent.returnValue = false;
+          if(theEvent.preventDefault) theEvent.preventDefault();
+          }
+        }
+  
+        </script>
+
+        <div id=rodape>
+          <p>.: João Roberto dos Santos Ramos Guidugli - Programa de Formação Itaú - Edição {pessoas com deficiência} :.<br>
+            <ul id="lista">
+              <li><a href="https://www.linkedin.com/in/jo%C3%A3o-roberto-guidugli-pcd-deaf-58897a1a2/" target="_blank" title="LinkedIn" class="btn btn-linkedin btn-lg"><img alt="Logo Linkedin" src="https://cdn-icons-png.flaticon.com/512/174/174857.png" id="efeito-img"></a></li>
+              <li><a href="https://github.com/engjobe" target="_blank" title="Github" class="btn btn-github btn-lg"><img alt="Logo Github" src="https://camo.githubusercontent.com/d3563008ac544a830a26cd54e8add19decb3299ef11712c071b44c8d01ec8ac2/68747470733a2f2f63646e332e69636f6e66696e6465722e636f6d2f646174612f69636f6e732f696e6669636f6e732f3531322f6769746875622e706e67" id="efeito-img"></a></li>
+              <li><a href="https://itautech.gama.academy/" target="_blank" title="itautech" class="btn btn-itautech btn-lg"><img alt="Logo Itau" src="https://www.itau.com.br/content/dam/itau/varejo/logo-itau-varejo-desktop.png" id="efeito-img"></li>
+              <li><a href="https://www.gama.academy/?utm_source=google&utm_medium=compramidia&utm_campaign=institucional-brand" target="_blank" tittle="Gama Academy" class="btn btn-gamaacademy btn-lg"><img alt="Logo Gama Academy" src="https://miro.medium.com/fit/c/160/160/1*EGF3tCyOPIiYy3zfyg8HpA.png" id="efeito-img"></a></li>
+            </ul>
+        </div>
+      </div>
+    </body>
+</html>
