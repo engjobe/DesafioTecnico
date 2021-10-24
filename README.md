@@ -1,9 +1,5 @@
-# Gama Academy - Transformando Talentos para o Futuro
+# Desafio Cadastro Pessoal - Atração
 
-#### Autores
-- [Gleyson Sampaio](https://github.com/gleyson-gama)
-
-## Desafio Cadastro Pessoal - Atração
 Criar um formulario para registrar dados pessoais
 
 ### Front
