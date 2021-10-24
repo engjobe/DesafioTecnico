@@ -31,6 +31,7 @@ body {
     justify-content:center;
     align-items: center;
     flex-wrap: wrap;
+    flex-shrink: 1;  
 }
 
 input[type=submit] {
@@ -48,7 +49,7 @@ input[type=text] {
     text-align: center;
     font-weight: bold;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 15px;
+    font-size: 19px;
 }
 
 #rodape ul li img {
