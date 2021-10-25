@@ -1,12 +1,18 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE html> <!--O Doctype HTML é uma declaração para informar ao navegador qual é a versão do HTML utilizada no arquivo-->
+<html lang="pt-BR"> <!--Necessário para que os user-agents saibam qual a linguagem principal do documento-->
+   
     <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <meta charset="UTF-8"> <!--UTF-8 (UCS Transformation Format 8) é a codificação de caracteres mais comum da World Wide Web-->
+      <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--permite que os autores da web escolham a versão do Internet Explorer na qual a página deve ser renderizada-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--A meta tag de viewport controla como um site é exibido em um dispositivo móvel-->
+      
       <title>.: Cadastro Pessoal - Atração :.</title>
+      
       <link rel="stylesheet" href="estilo.css"/>
+
     </head>
+
     <body>
       <div id="conteudo">
           <div id="cabecalho">
@@ -120,7 +126,7 @@
             }
           }
 
-          // Máscara ER
+          // Máscara Celular
           function mascara(o,f){
             v_obj=o
             v_fun=f
@@ -154,32 +160,32 @@
             var celular = document.getElementById("celular");  
 
             if (nome.value == "") {
-              alert("\nObrigatório preencher o campo Nome!");
+              alert("\nO preenchimento do campo Nome é obrigatório!");
               nome.focus();
               return;
             }
             if (sobrenome.value == "") {
-              alert("\nObrigatório preencher o campo Sobrenome!");
+              alert("\nO preenchimento do campo Sobrenome é obrigatório!");
               sobrenome.focus();
               return;
             }
             if (cpf.value == "") {
-              alert("\nObrigatório preencher o campo CPF!");
+              alert("\nO preenchimento do campo CPF é obrigatório!");
               cpf.focus();
               return;
             }
             if (endereco.value == "") {
-              alert("\nObrigatório preencher o campo Endereço!");
+              alert("\nO preenchimento do campo Endereço é obrigatório!");
               endereco.focus();
               return;
             }
             if (numero.value == "") {
-              alert("\nObrigatório preencher o campo Número!");
+              alert("\nO preenchimento do campo Número é obrigatório!");
               numero.focus();
               return;
             }
             if (celular.value == "") {
-              alert("\nObrigatório preencher o campo Celular!");
+              alert("\nO preenchimento do campo Celular é obrigatório!");
               celular.focus();
               return;
             }    

@@ -28,10 +28,10 @@ body {
 #coluna2 {
     max-width: 100%;
     display: flex;
-    justify-content:center;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-shrink: 1;  
+    justify-content:center; /* os itens são alinhados ao centro do eixo principal */
+    align-items: center; /* os itens são centralizados no eixo transversal */
+    flex-wrap: wrap; /* define se os itens flexíveis são forçados a ficarem na mesma linha ou se podem ser quebradas em varias linhas */
+    flex-shrink: 1; /* define a proporção com que um item deve encolher caso seja necessário */ 
 }
 
 input[type=submit] {
